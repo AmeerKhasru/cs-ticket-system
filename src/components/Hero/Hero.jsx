@@ -4,7 +4,7 @@ import resolvedImage from '../../assets/vector2.png';
 
 const HeroSection = () => {
     return (
-        <div className="w-full bg-base-200 py-10">
+        <div className="max-w-[1200px] mx-auto bg-base-200 py-10">
             <div className="max-w-[1200px] mx-auto px-4 md:px-0">
                 <div className="flex flex-col md:flex-row gap-6 min-h-[200px]">
 

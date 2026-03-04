@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import { Suspense } from 'react'
 import Tickets from './components/Tickets/Tickets'
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Suspense fallback={<div>Loading tickets...</div>}>
         {ticketsPromise.then(tickets => <Tickets tickets={tickets} />)}
       </Suspense>
+      <Footer></Footer>
     </>
   )
 }

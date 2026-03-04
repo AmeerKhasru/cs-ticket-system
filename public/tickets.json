@@ -4,107 +4,107 @@
     "title": "Unable to download invoice",
     "description": "When I click 'Download PDF' for my April invoice, the page just refreshes and nothing happens.",
     "customer": "Sarah Jenkins",
-    "priority": "Medium",
+    "priority": "Medium Priority",
     "status": "In-Progress",
-    "createdAt": "2024-05-11T09:15:00Z"
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-202",
     "title": "Double charged for monthly subscription",
     "description": "I noticed two identical charges on my credit card statement this morning. Please refund the extra one.",
     "customer": "Mark Thompson",
-    "priority": "High",
-    "status": "In-Progress",
-    "createdAt": "2024-05-11T10:30:00Z"
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-203",
     "title": "Forgot my password and reset link is not working",
     "description": "I've requested a reset link three times, but I haven't received any email in my inbox or spam folder.",
     "customer": "Elena Rodriguez",
-    "priority": "High",
-    "status": "Resolved",
-    "createdAt": "2024-05-10T08:00:00Z"
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2024-05-10"
   },
   {
     "id": "TIC-204",
     "title": "Change my shipping address for order #5509",
     "description": "I accidentally entered my old office address. I need to update it before the package ships tomorrow.",
     "customer": "David Chen",
-    "priority": "Medium",
+    "priority": "Medium Priority",
     "status": "In-Progress",
-    "createdAt": "2024-05-11T12:45:00Z"
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-205",
     "title": "Cancel my account subscription",
     "description": "I no longer need this service. Please cancel my plan before the next billing cycle on the 15th.",
     "customer": "Jessica Miller",
-    "priority": "Low",
-    "status": "Resolved",
-    "createdAt": "2024-05-09T14:20:00Z"
+    "priority": "Low Priority",
+    "status": "Open",
+    "createdAt": "2024-05-09"
   },
   {
     "id": "TIC-206",
     "title": "Cannot update my profile picture",
     "description": "Every time I try to upload a photo, it says 'File too large' even though the image is very small.",
     "customer": "Kevin Hart",
-    "priority": "Low",
+    "priority": "Low Priority",
     "status": "In-Progress",
-    "createdAt": "2024-05-11T15:10:00Z"
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-207",
     "title": "Discount code from the newsletter is not applying",
     "description": "I am trying to use the code WELCOME20 but the checkout page says 'Invalid Code'.",
     "customer": "Amanda White",
-    "priority": "Medium",
-    "status": "Resolved",
-    "createdAt": "2024-05-08T11:00:00Z"
+    "priority": "Medium Priority",
+    "status": "Open",
+    "createdAt": "2024-05-08"
   },
   {
     "id": "TIC-208",
     "title": "App keeps crashing on my Samsung phone",
     "description": "Ever since the last update, the app closes immediately after I try to open my notifications.",
     "customer": "Brian O'Conner",
-    "priority": "High",
-    "status": "In-Progress",
-    "createdAt": "2024-05-11T07:30:00Z"
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-209",
     "title": "Inquiry regarding bulk order pricing",
     "description": "I am looking to buy 50 units for my team. Do you offer a corporate discount?",
     "customer": "Michael Scott",
-    "priority": "Low",
-    "status": "Resolved",
-    "createdAt": "2024-05-07T09:00:00Z"
+    "priority": "Low Priority",
+    "status": "Open",
+    "createdAt": "2024-05-07"
   },
   {
     "id": "TIC-210",
     "title": "Wrong item received in my last order",
     "description": "I ordered a Blue Jacket but I received a Red Sweater instead. Order ID: #9921.",
     "customer": "Linda G.",
-    "priority": "High",
-    "status": "In-Progress",
-    "createdAt": "2024-05-11T13:05:00Z"
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-211",
     "title": "Website is showing 'Service Unavailable' error",
     "description": "I'm trying to access my dashboard but I keep getting a blank screen with a server error message.",
     "customer": "Chris Evans",
-    "priority": "Critical",
+    "priority": "High Priority",
     "status": "In-Progress",
-    "createdAt": "2024-05-11T16:00:00Z"
+    "createdAt": "2024-05-11"
   },
   {
     "id": "TIC-212",
     "title": "Requesting a copy of my transaction history",
     "description": "I need a full report of all my payments from last year for tax purposes.",
     "customer": "Robert Downey",
-    "priority": "Medium",
-    "status": "Resolved",
-    "createdAt": "2024-05-06T10:45:00Z"
+    "priority": "Medium Priority",
+    "status": "Open",
+    "createdAt": "2024-05-06"
   }
 ]

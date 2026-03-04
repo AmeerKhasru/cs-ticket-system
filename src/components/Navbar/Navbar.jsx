@@ -2,11 +2,10 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        /* 1. Full-width wrapper: Background and shadow stay edge-to-edge */
-        <div className=" max-w-full mx-auto bg-base-100 shadow-sm">
+        
+        <div className=" max-w-[1200px] mx-auto bg-[#FFFFFF]">
             
-            {/* 2. Centered Container: Limits content to 1200px and centers it */}
-            <div className=" mx-auto navbar px-4 md:px-8 lg:px-16">
+            <div className=" mx-auto navbar px-4 md:px-4 lg:px-4">
                 
                 <div className="navbar-start">
                     <div className="dropdown">
