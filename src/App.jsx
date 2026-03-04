@@ -24,8 +24,10 @@ function App() {
     if (isExist) {
       return toast.warn("Already added!", { theme: "colored" });
     }
-    setTaskStatusList([...taskStatusList, ticket]);
-    toast.success("Added to status!");
+
+    const updatedTicket = { ...ticket, status: "In-progress" };
+    setTaskStatusList([...taskStatusList, updatedTicket]);
+    toast.success("Ticket is now In-progress!");
   };
 
   const handleRemoveFromTaskStatus = (ticketId) => {
@@ -60,7 +62,7 @@ function App() {
           handleAddToTaskStatus={handleAddToTaskStatus} 
           taskStatusList={taskStatusList} 
           handleRemoveFromTaskStatus={handleRemoveFromTaskStatus} 
-          resolvedList={resolvedList} 
+          resolvedList={resolvedList}   
         />
       </Suspense>
       <Footer />

@@ -23,7 +23,7 @@
     "description": "I've requested a reset link three times, but I haven't received any email in my inbox or spam folder.",
     "customer": "Elena Rodriguez",
     "priority": "High Priority",
-    "status": "Open",
+    "status": "In-Progress",
     "createdAt": "2024-05-10"
   },
   {
@@ -32,7 +32,7 @@
     "description": "I accidentally entered my old office address. I need to update it before the package ships tomorrow.",
     "customer": "David Chen",
     "priority": "Medium Priority",
-    "status": "In-Progress",
+    "status": "Open",
     "createdAt": "2024-05-11"
   },
   {
@@ -41,7 +41,7 @@
     "description": "I no longer need this service. Please cancel my plan before the next billing cycle on the 15th.",
     "customer": "Jessica Miller",
     "priority": "Low Priority",
-    "status": "Open",
+    "status": "In-Progress",
     "createdAt": "2024-05-09"
   },
   {
@@ -50,7 +50,7 @@
     "description": "Every time I try to upload a photo, it says 'File too large' even though the image is very small.",
     "customer": "Kevin Hart",
     "priority": "Low Priority",
-    "status": "In-Progress",
+    "status": "Open",
     "createdAt": "2024-05-11"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Ever since the last update, the app closes immediately after I try to open my notifications.",
     "customer": "Brian O'Conner",
     "priority": "High Priority",
-    "status": "Open",
+    "status": "In-Progress",
     "createdAt": "2024-05-11"
   },
   {
@@ -95,7 +95,7 @@
     "description": "I'm trying to access my dashboard but I keep getting a blank screen with a server error message.",
     "customer": "Chris Evans",
     "priority": "High Priority",
-    "status": "In-Progress",
+    "status": "Open",
     "createdAt": "2024-05-11"
   },
   {
