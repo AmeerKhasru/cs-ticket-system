@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Ticket = ({ title, status, description, id, priority, customer, createdAt }) => {
+const Ticket = ({ title, status, description, id, priority, customer, createdAt , handleAddToTaskStatus }) => {
     // Status Logic: Open (Green), In-Progress (Yellow)
     const statusClass = status.toLowerCase() === 'open' 
         ? 'badge-success text-white' 
@@ -13,15 +13,16 @@ const Ticket = ({ title, status, description, id, priority, customer, createdAt 
         if (val === 'medium priority') return 'text-yellow-500';
         return 'text-red-600';
     };
+ 
 
     return (
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col h-full">
+        <div onClick={() => handleAddToTaskStatus({id, title})} className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all hover:bg-amber-200 flex flex-col h-full">
             <div className="flex justify-between items-start mb-3">
                 <h3 className="font-bold text-slate-800 leading-tight flex-1 mr-2">{title}</h3>
                 <span className={`badge badge-sm font-bold p-3 ${statusClass}`}>{status}</span>
             </div>
             
-            <p className="text-sm text-slate-500 mb-4 flex-grow line-clamp-2">
+            <p className="text-sm text-slate-500 mb-4 line-clamp-2">
                 {description}
             </p>
 

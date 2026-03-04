@@ -15,30 +15,30 @@ This project is a React-based **Customer Support Zone** designed to display cust
 
 ### ✅ Navbar 
 
-* Website name/logo on the **left**.
-* Menu items and **New Ticket** button on the **right**.
+* Website name/logo on the **left**. deone
+* Menu items and **New Ticket** button on the **right**. done
 
 ### ✅ Banner
 
-* Banner section designed according to Figma.
-* Shows a **linear gradient** background.
-* Displays ticket statistics:
+* Banner section designed according to Figma. done
+* Shows a **linear gradient** background. done
+* Displays ticket statistics: done
 
   * **In Progress Count**
-  * **Resolved Count** (default = 0).
+  * **Resolved Count** (default = 0). 
 
 ### ✅ Main Section
 
-1. **JSON Data **
+1. **JSON Data ** done
 
-   * Created **10–15 tickets** with the following properties:
+   * Created **10–15 tickets** with the following properties: done
 
-     * `id`, `title`, `description`, `customer`, `priority`, `status`, `createdAt`.
+     * `id`, `title`, `description`, `customer`, `priority`, `status`, `createdAt`. done
 
 2. **Ticket Cards**
 
-   * Display all ticket information in a **card layout**.
-   * Cards arranged in a **2-column grid** (left side).
+   * Display all ticket information in a **card layout**. done
+   * Cards arranged in a **2-column grid** (left side). done
 
 3. **Task Status Section**
 
@@ -55,11 +55,11 @@ This project is a React-based **Customer Support Zone** designed to display cust
 
 ### ✅ Footer 
 
-* Designed according to Figma.
+* Designed according to Figma. done
 
 ### ✅ Responsiveness 
 
-* The entire website is **responsive** for mobile devices.
+* The entire website is **responsive** for mobile devices. done
 
 ### ✅ Readme: 
 Create a README file to answer the following question-
