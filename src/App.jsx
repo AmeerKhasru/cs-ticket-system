@@ -11,7 +11,7 @@ function App() {
 
   const [tickets, setTickets] = useState([]);
   const [taskStatusList, setTaskStatusList] = useState([]);
-  const [resolvedTasks, setResolvedTasks] = useState([]);
+  const [resolvedList, setResolvedList] = useState([]);
  
 
   // FIX: moved outside component so it doesn't re-fetch on every render
@@ -26,12 +26,24 @@ function App() {
         });        
     }
     setTaskStatusList([...taskStatusList, ticket]);
+    toast.success("Ticket added to task status!", {
+        theme: "colored"
+    });
 };
 
   const handleRemoveFromTaskStatus = (ticketId) => {
     const updatedList = taskStatusList.filter(item => item.id !== ticketId);
     setTaskStatusList(updatedList);
-    toast.success("Task completed!");
+    
+    const isResolved = resolvedList.find(item => item.id === ticketId);
+    if (!isResolved) {
+        setResolvedList([...resolvedList, taskStatusList.find(item => item.id === ticketId)]);
+    }
+    toast.success("Task completed and moved to resolved!", {
+        theme: "colored"
+    });
+
+
 };
 
   
@@ -42,12 +54,13 @@ function App() {
 
       <ToastContainer position="top-right" autoClose={3000} />
 
-      <Suspense fallback={<div>Loading...</div>}>
-        <Hero taskStatusList={taskStatusList}></Hero>
-      </Suspense>
+      
+        <Hero taskStatusList={taskStatusList}
+        resolvedList={resolvedList}></Hero>
+      
 
       <Suspense fallback={<div>Loading tickets...</div>}>
-        <Tickets ticketsPromise={ticketsPromise} tickets={tickets} handleAddToTaskStatus={handleAddToTaskStatus} taskStatusList={taskStatusList} handleRemoveFromTaskStatus={handleRemoveFromTaskStatus} />
+        <Tickets ticketsPromise={ticketsPromise} tickets={tickets} handleAddToTaskStatus={handleAddToTaskStatus} taskStatusList={taskStatusList} handleRemoveFromTaskStatus={handleRemoveFromTaskStatus} resolvedList={resolvedList} />
       </Suspense>
       <Footer></Footer>
     </>

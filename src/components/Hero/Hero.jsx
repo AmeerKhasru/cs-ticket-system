@@ -2,7 +2,7 @@ import React from 'react';
 import inProgressImage from '../../assets/vector1.png';
 import resolvedImage from '../../assets/vector2.png';
 
-const HeroSection = ({ taskStatusList }) => {
+const HeroSection = ({ taskStatusList, resolvedList }) => {
     return (
         <div className="max-w-[1200px] mx-auto bg-base-200 py-8 rounded-2xl mt-10">
             <div className="max-w-[1200px] mx-auto px-4 md:px-4 ">
@@ -36,7 +36,7 @@ const HeroSection = ({ taskStatusList }) => {
                     >
                         <div className="relative z-10 text-center">
                             <h2 className="text-4xl font-black mb-2 italic">Resolved</h2>
-                            <div className="mt-4 badge badge-success p-4 font-bold text-white">1,208 </div>
+                            <div className="mt-4 badge badge-success p-4 font-bold text-white">{resolvedList?.length || 0}</div>
                         </div>
                     </div>
 

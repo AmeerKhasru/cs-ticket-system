@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import Ticket from '../Ticket/Ticket';
 
 // FIX 1: Added taskStatusList to the destructured props
-const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList, handleRemoveFromTaskStatus }) => {
+const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList, handleRemoveFromTaskStatus, resolvedList }) => {
 
     const tickets = use(ticketsPromise);
 
@@ -46,12 +46,12 @@ const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList, handle
                             {taskStatusList.map((item, index) => (
                                 <div key={item.id || index} className="flex flex-col gap-3 p-4 bg-slate-50 border border-slate-200 rounded-xl animate-fadeIn">
 
-                                    
+
                                     <span className="text-sm font-bold text-slate-700">
                                         {item.title}
                                     </span>
 
-                                    
+
                                     <button onClick={() => handleRemoveFromTaskStatus(item.id)} className="btn btn-xs w-full bg-green-600 border-none text-white text-[11px] hover:bg-green-700 py-2 h-auto">
                                         Complete
                                     </button>
@@ -62,14 +62,28 @@ const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList, handle
                     )}
                 </div>
 
+                
                 {/* Resolved Task Panel */}
                 <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                    <h1 className="text-xl font-bold text-slate-700 flex items-center gap-2">
+                    <h1 className="text-xl font-bold text-slate-700 flex items-center gap-2 mb-4">
                         <span className="h-2 w-2 bg-green-500 rounded-full"></span>
-                        Resolved Task
+                        Resolved Task ({resolvedList?.length || 0})
                     </h1>
-                    <div className="mt-4 flex flex-col items-center justify-center py-6 text-center">
-                        <p className="text-sm text-slate-400">No Resolved Tasks yet</p>
+
+                    <div className="space-y-3">
+                        {resolvedList.length === 0 ? (
+                            <div className="flex flex-col items-center justify-center py-6 text-center">
+                                <p className="text-sm text-slate-400 italic">No Resolved Tasks yet</p>
+                            </div>
+                        ) : (
+                            resolvedList.map((item, index) => (
+                                <div key={item.id || index} className="p-3 bg-indigo-50 border border-indigo-100 rounded-xl animate-fadeIn">
+                                    <p className="text-xs font-bold text-indigo-900">
+                                        {item.title}
+                                    </p>
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
 

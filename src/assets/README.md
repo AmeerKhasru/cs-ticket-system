@@ -47,9 +47,9 @@ This project is a React-based **Customer Support Zone** designed to display cust
 
      * Ticket Title
      * **Complete Button**
-   * Clicking **Complete Button**:
+   * Clicking **Complete Button**: done
 
-     * show alert
+     * show alert. Done
      
 
 
@@ -76,18 +76,18 @@ Create a README file to answer the following question-
 
 ## 📌 Challenge Requirements 
 
-### 🔔 React-Toastify 
+### 🔔 React-Toastify . done
 
 * Used **React-Toastify** to replace all alerts with stylish toast notifications.
 
-### 📝 Task Completion Logic 
+### 📝 Task Completion Logic. done
 
 Clicking **Complete Button**:
 
-1. It is **removed from Task Status**. 
-2. It is added to the **Resolved List**. 
-3. The **In Progress count decreases**. 
-4. The **Resolved count increases**. 
+1. It is **removed from Task Status**. done
+2. It is added to the **Resolved List**. done
+3. The **In Progress count decreases**. done
+4. The **Resolved count increases**. done
 5. It is removed from the **Customer Tickets list**. 
 
 
