@@ -3,8 +3,8 @@ import Ticket from '../Ticket/Ticket';
 
 const Tickets = ({ tickets }) => {
     return (
-        <div className="max-w-[1200px] mx-auto bg-base-200 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-0 py-10">
-            
+        <div className="max-w-[1200px] mx-auto bg-base-200 rounded-2xl mt-2 grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 md:px-0 py-10">
+             
             {/* LEFT SIDE: Tickets (Takes 2 columns of the 3) */}
             <div className="lg:col-span-2 lg:px-4" >
                 <h2 className="text-2xl font-bold text-slate-800 mr-4 mb-2">Customer Tickets</h2>
