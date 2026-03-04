@@ -1,68 +1,69 @@
-import { useState } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
-import { Suspense } from 'react'
 import Tickets from './components/Tickets/Tickets'
 import Footer from './components/Footer/Footer'
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css'
 
 function App() {
-
-  const [tickets, setTickets] = useState([]);
+  const [tickets, setTickets] = useState([]); 
   const [taskStatusList, setTaskStatusList] = useState([]);
   const [resolvedList, setResolvedList] = useState([]);
- 
 
-  // FIX: moved outside component so it doesn't re-fetch on every render
-  const ticketsPromise = fetch('/tickets.json')
-    .then(response => response.json())
+  
+  useEffect(() => {
+    fetch('/tickets.json')
+      .then(res => res.json())
+      .then(data => setTickets(data));
+  }, []);
 
   const handleAddToTaskStatus = (ticket) => {
     const isExist = taskStatusList.find(item => item.id === ticket.id);
-    if (isExist) {  
-      return toast.warn("Ticket already added to task status!", {
-            theme: "colored"
-        });        
+    if (isExist) {
+      return toast.warn("Already added!", { theme: "colored" });
     }
     setTaskStatusList([...taskStatusList, ticket]);
-    toast.success("Ticket added to task status!", {
-        theme: "colored"
-    });
-};
+    toast.success("Added to status!");
+  };
 
   const handleRemoveFromTaskStatus = (ticketId) => {
-    const updatedList = taskStatusList.filter(item => item.id !== ticketId);
-    setTaskStatusList(updatedList);
     
-    const isResolved = resolvedList.find(item => item.id === ticketId);
-    if (!isResolved) {
-        setResolvedList([...resolvedList, taskStatusList.find(item => item.id === ticketId)]);
+    const completedTicket = taskStatusList.find(item => item.id === ticketId);
+
+    if (completedTicket) {
+      const updatedMainTickets = tickets.filter(item => item.id !== ticketId);
+      setTickets(updatedMainTickets);
+
+      
+      const updatedStatusList = taskStatusList.filter(item => item.id !== ticketId);
+      setTaskStatusList(updatedStatusList);
+
+      
+      setResolvedList([...resolvedList, completedTicket]);
+
+      toast.success("Ticket completed and removed from all lists!");
     }
-    toast.success("Task completed and moved to resolved!", {
-        theme: "colored"
-    });
-
-
-};
-
-  
+  };
 
   return (
     <>
-      <Navbar></Navbar>
-
+      <Navbar />
       <ToastContainer position="top-right" autoClose={3000} />
-
       
-        <Hero taskStatusList={taskStatusList}
-        resolvedList={resolvedList}></Hero>
-      
+      <Hero taskStatusList={taskStatusList} resolvedList={resolvedList} />
 
-      <Suspense fallback={<div>Loading tickets...</div>}>
-        <Tickets ticketsPromise={ticketsPromise} tickets={tickets} handleAddToTaskStatus={handleAddToTaskStatus} taskStatusList={taskStatusList} handleRemoveFromTaskStatus={handleRemoveFromTaskStatus} resolvedList={resolvedList} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Tickets 
+          tickets={tickets} 
+          handleAddToTaskStatus={handleAddToTaskStatus} 
+          taskStatusList={taskStatusList} 
+          handleRemoveFromTaskStatus={handleRemoveFromTaskStatus} 
+          resolvedList={resolvedList} 
+        />
       </Suspense>
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }

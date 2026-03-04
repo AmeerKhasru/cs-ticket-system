@@ -1,13 +1,13 @@
-import React, { use } from 'react';
+
 import Ticket from '../Ticket/Ticket';
 
-// FIX 1: Added taskStatusList to the destructured props
-const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList, handleRemoveFromTaskStatus, resolvedList }) => {
 
-    const tickets = use(ticketsPromise);
+const Tickets = ({ tickets, handleAddToTaskStatus, taskStatusList, handleRemoveFromTaskStatus, resolvedList }) => {
+
+    
 
     return (
-        /* Added px-6 for better mobile spacing */
+       
         <div className="max-w-[1200px] mx-auto bg-base-200 rounded-2xl mt-2 grid grid-cols-1 lg:grid-cols-3 gap-8 px-6 md:px-0 py-10 ">
 
             {/* LEFT SIDE: Tickets */}
@@ -32,11 +32,11 @@ const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList, handle
                 <div className="bg-white p-6 rounded-2xl border border-dashed border-slate-300 shadow-sm">
                     <h1 className="text-xl font-bold text-slate-700 flex items-center gap-2 mb-4">
                         <span className="h-2 w-2 bg-blue-500 rounded-full"></span>
-                        {/*  Check if taskStatusList exists before reading length */}
+                        
                         Task Status ({taskStatusList?.length || 0})
                     </h1>
 
-                    {/* Handle empty state vs list state */}
+                   
                     {!taskStatusList || taskStatusList.length === 0 ? (
                         <p className="text-sm text-slate-400 p-3 bg-slate-50 rounded-lg italic">
                             Select a ticket to add to Task status
