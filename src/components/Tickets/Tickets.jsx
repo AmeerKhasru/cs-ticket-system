@@ -5,6 +5,7 @@ import Ticket from '../Ticket/Ticket';
 const Tickets = ({ ticketsPromise, handleAddToTaskStatus, taskStatusList }) => {
     
     const tickets = use(ticketsPromise);
+    
     return (
         /* Added px-6 for better mobile spacing */
         <div className="max-w-[1200px] mx-auto bg-base-200 rounded-2xl mt-2 grid grid-cols-1 lg:grid-cols-3 gap-8 px-6 md:px-0 py-10 ">

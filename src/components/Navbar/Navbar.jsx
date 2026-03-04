@@ -26,7 +26,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="px-4">
-                        <span className="text-xl font-black tracking-tighter text-2xl italic text-[#422AD5]">
+                        <span className=" font-black tracking-tighter text-2xl italic text-[#422AD5]">
                             CS-TICKET
                         </span>
                         <span className="text-[10px] font-bold text-slate-500 tracking-[0.2em] uppercase mt-1">
