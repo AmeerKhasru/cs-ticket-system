@@ -29,7 +29,7 @@ const Ticket = ({ title, status, description, id, priority, customer, createdAt 
                 <div className="flex flex-col">
                     <span className="text-slate-600 font-mono">#{id}</span>
                 </div>
-                <div className="flex flex-col items-center uppercase">
+                <div className="flex flex-col items-center ">
                     <span className={priorityClass(priority)}>{priority}</span>
                 </div>
                 <div className="flex flex-col items-end">

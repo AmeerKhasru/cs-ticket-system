@@ -8,7 +8,6 @@ const HeroSection = () => {
             <div className="max-w-[1200px] mx-auto px-4 md:px-4 ">
                 <div className="flex flex-col md:flex-row gap-6 min-h-[200px]">
 
-                    {/* Left Side: On-Progress */}
                     <div
                         className="relative flex-1 overflow-hidden rounded-2xl flex flex-col items-center justify-center text-white p-8 group cursor-pointer shadow-xl transition-all duration-300 hover:brightness-110"
                         style={{
