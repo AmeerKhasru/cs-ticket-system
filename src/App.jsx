@@ -11,6 +11,7 @@ function App() {
 
   const [tickets, setTickets] = useState([]);
   const [taskStatusList, setTaskStatusList] = useState([]);
+  const [resolvedTasks, setResolvedTasks] = useState([]);
  
 
   // FIX: moved outside component so it doesn't re-fetch on every render
@@ -18,18 +19,19 @@ function App() {
     .then(response => response.json())
 
   const handleAddToTaskStatus = (ticket) => {
-
     const isExist = taskStatusList.find(item => item.id === ticket.id);
-
-    if (isExist) {
-      
+    if (isExist) {  
       return toast.warn("Ticket already added to task status!", {
             theme: "colored"
-        });
-        
+        });        
     }
-
     setTaskStatusList([...taskStatusList, ticket]);
+};
+
+  const handleRemoveFromTaskStatus = (ticketId) => {
+    const updatedList = taskStatusList.filter(item => item.id !== ticketId);
+    setTaskStatusList(updatedList);
+    toast.success("Task completed!");
 };
 
   
@@ -45,7 +47,7 @@ function App() {
       </Suspense>
 
       <Suspense fallback={<div>Loading tickets...</div>}>
-        <Tickets ticketsPromise={ticketsPromise} tickets={tickets} handleAddToTaskStatus={handleAddToTaskStatus} taskStatusList={taskStatusList} />
+        <Tickets ticketsPromise={ticketsPromise} tickets={tickets} handleAddToTaskStatus={handleAddToTaskStatus} taskStatusList={taskStatusList} handleRemoveFromTaskStatus={handleRemoveFromTaskStatus} />
       </Suspense>
       <Footer></Footer>
     </>
